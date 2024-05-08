@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<title>
+    Сайт программиста
+</title>
+    
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<div class="topnav">
+    <span>888 888 888</span>
+    <ul>
+    <li><a href="https://t.me/kozak_kr23">Telegram</a></li>
+    </ul>
+</div>
+
+<nav>
+    <div class="logo">
+    <a href="home.html"><img src="img/neo.png" alt="logo">MATRIX</a>
+    </div>
+    <div class="toggle">
+    <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+    </div>
+    <ul class="menu">
+    <li><a href="home.html">Главная</a></li>
+    <li><a href="about.html">Обо мне</a></li>
+    <li><a href="contacts.html">Контакт</a></li>
+    </ul>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    $(function(){
+    $(".toggle").on("click", function(){
+        if($(".menu").hasClass("active")){
+        $(".menu").removeClass("active");
+        $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+        } else{
+        $(".menu").addClass("active");
+        $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+        }
+    }
+    );})
+    
+</script>
+<!-- End Navigation Bar -->
+    
+<!-- Content -->
+
+<div class="centered">
+    
+    <h1>Мои контакты</h1>
+    <div class="card">
+    <img src="img/me.jpeg" alt="me" style="width: 100%;">
+        <h1>Don Neo</h1>
+        <p class="title">Founder</p>
+        <p>Email: neo@matrix.neo</p>
+        <img src="img/TelegramQR.jpg" alt="qr code" style="width: 100px;">
+        <p><a href="https://t.me/kozak_kr23"><button>Написать в Телегу</button></a></p>
+    </div>
+
+</div>
+
+<!-- End Content -->
+</body>
+</html>
